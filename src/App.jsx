@@ -1,120 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { motion } from 'framer-motion'
+import Navbar from './components/Navbar'
+import Projects from './components/Projects'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+      <Navbar />
+      <main>
+        <section id="home" className="hero">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="eyebrow">open to opportunities</div>
+            <h1>Hi, I'm <span className="highlight">Jeff Chiang</span> —<br />a software developer.</h1>
+            <p>Recent Computing Science grad from Simon Fraser University, focused on
+              full-stack development, machine learning, and robotics.</p>
+          </motion.div>
+        </section>
+
+        <Projects />
+
+        <section id="about">
+          <div className="section-eyebrow">// 03 about</div>
+          <h2>About Me</h2>
+          <p>I'm a Computing Science new graduate at Simon Fraser University,
+            with a focus on full-stack development, machine learning, and robotics.</p>
+          <p>I enjoy working across the stack — from building REST APIs with Spring Boot and
+            React frontends, to fine-tuning transformer models for NLP tasks, to implementing
+            autonomous motion planning algorithms for robots in ROS2 and Gazebo. Recent projects
+            include a course scheduling system that cut admin scheduling time by 50%, a
+            fine-tuned BART model for emotion-controlled text generation, and a TurtleBot3
+            navigation system comparing RRT, RRT*, and PRM path planners.</p>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            I'm comfortable with Python, Java, C/C++, JavaScript/TypeScript, and tools like
+            PyTorch, TensorFlow, Docker, and AWS. I hold an AWS Cloud Practitioner certification
+            and am always looking for opportunities to apply machine learning and software
+            engineering to real-world problems.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+        </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        <section id="contact">
+          <div className="section-eyebrow">// 04 contact</div>
+          <h2>Get in Touch</h2>
+          <p>Email: chiangjeff23@gmail.com</p>
+          <p>
+            <a href="https://github.com/FuJen0980" target="_blank" rel="noreferrer">GitHub</a>
+            {' '}·{' '}
+            <a href="https://www.linkedin.com/in/jeff-chiang-5b7025253/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </p>
+        </section>
+      </main>
     </>
   )
 }
