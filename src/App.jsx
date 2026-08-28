@@ -3,6 +3,24 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 
 function App() {
+  const certifications = [
+    {
+      title: "AWS Certified Solutions Architect – Associate",
+      issuer: "Amazon Web Services",
+      date: "2026",
+      badgeClass: "badge-aws-saa",
+      // Optional: replace with your Credly verification link
+      verifyUrl: "https://www.credly.com/badges/db3f6ae2-4513-489d-b4af-5b5f2793168a/public_url" 
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "2025",
+      badgeClass: "badge-aws-cp",
+      verifyUrl: "https://www.credly.com/badges/2b1cf5e5-0729-483e-b900-8f391fbc5c72/public_url"
+    }
+  ]
+
   return (
     <>
       <Navbar />
@@ -32,8 +50,37 @@ function App() {
           </p>
         </section>
 
+        <section id="certifications">
+          <div className="section-eyebrow">// 04 certifications</div>
+          <h2>Certifications</h2>
+          <div className="certifications-grid">
+            {certifications.map((cert, index) => (
+              <a 
+                key={index}
+                href={cert.verifyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="cert-card"
+              >
+                <div className="cert-badge-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+
+                  </svg>
+                </div>
+                <div className="cert-info">
+                  <h3>{cert.title}</h3>
+                  <p>{cert.issuer} · {cert.date}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section id="contact">
-          <div className="section-eyebrow">// 04 contact</div>
+          <div className="section-eyebrow">// 05 contact</div>
           <h2>Get in Touch</h2>
           <p>Email: chiangjeff23@gmail.com</p>
           <p>
