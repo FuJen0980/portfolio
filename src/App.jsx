@@ -25,19 +25,10 @@ function App() {
         <section id="about">
           <div className="section-eyebrow">// 03 about</div>
           <h2>About Me</h2>
-          <p>I'm a Computing Science new graduate at Simon Fraser University,
-            with a focus on full-stack development, machine learning, and robotics.</p>
-          <p>I enjoy working across the stack — from building REST APIs with Spring Boot and
-            React frontends, to fine-tuning transformer models for NLP tasks, to implementing
-            autonomous motion planning algorithms for robots in ROS2 and Gazebo. Recent projects
-            include a course scheduling system that cut admin scheduling time by 50%, a
-            fine-tuned BART model for emotion-controlled text generation, and a TurtleBot3
-            navigation system comparing RRT, RRT*, and PRM path planners.</p>
+          <p>I'm a Computing Science new graduate from Simon Fraser University, specializing in software engineering, machine learning, and AI robotics.</p>
+          <p>I enjoy working across the stack — from building REST APIs with Spring Boot and React frontends, to fine-tuning transformer models for NLP, to building deep learning computer vision pipelines, to implementing autonomous motion planning algorithms in ROS2. Recent projects include a geospatial OSM Proximity Population analyzer for Greater Vancouver, an AI framework for predicting Image Dependent Annotation Variability in medical segmentation, a ROS2/C++ motion planning system evaluating RRT, RRT*, PRM, and goal-biased path planners, a fine-tuned BART model for emotion-controlled text rewriting, and the Fraser International College Scheduler platform that cut admin setup time by 50%.</p>
           <p>
-            I'm comfortable with Python, Java, C/C++, JavaScript/TypeScript, and tools like
-            PyTorch, TensorFlow, Docker, and AWS. I hold an AWS Cloud Practitioner certification
-            and am always looking for opportunities to apply machine learning and software
-            engineering to real-world problems.
+            I'm comfortable with Python, C/C++, Java, JavaScript/TypeScript, and tools like PyTorch, ROS2, Docker, and AWS. I hold AWS Solutions Architect – Associate and AWS Cloud Practitioner certifications, and I am always looking for opportunities to apply machine learning and software engineering to real-world problems.
           </p>
         </section>
 
